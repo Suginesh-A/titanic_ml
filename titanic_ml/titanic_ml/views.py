@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 import pandas as pd
 def prediction(Pclass,Sex,Age,Sibsp,Parch,Fare,Embarked,Title):
     x=[[Pclass,Sex,Age,Sibsp,Parch,Fare,Embarked,Title]]
-    rf=pickle.load(open('/home/suginesh/Documents/django/projects/titanic_ml/titanic_ml/ml_model.sav','rb'))
+    rf=pickle.load(open('ml_model.sav','rb'))
     predictions=rf.predict(x)
     return predictions
 def index (requests):
