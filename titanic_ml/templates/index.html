@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <title></title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+  </head>
+  <body>
+    <h1>Welcome to Titanic predictor</h1>
+    <div class="box-wrapper">
+          <div id="box1">
+            <h2>what is machine learning..?</h2>
+              <p> &emsp;&emsp;&emsp; Machine learning is a method of data analysis that automates
+                 analytical model building. It is a branch of artificial intelligence based on the idea that
+                 systems can learn from data, identify patterns and make decisions with minimal human intervention.</p>
+          </div>
+
+          <div id="box2">
+              <a href="https://en.wikipedia.org/wiki/Machine_learning">Click here to know more</a>
+          </div>
+
+          <div id="box3">
+
+              <div id="box4">
+                <h2>do some predictions.........</h2>
+                  <form class="form_class" action="{% url 'results'%}">
+                      <label for="salutation">Name :</label>
+                    <select name="Salutation" id="salutation">
+
+                    <option value="1">Mr</option>
+                    <option value="2">Miss</option>
+                    <option value="3">Mrs</option>
+                    <option value="4">Master</option>
+                    <option value="5">Dr</option>
+                    <option value="6">Rev</option>
+                    <option value="7">Royal</option>
+                    <option value="8">Officer</option>
+                  </select>
+                  <input type="text" name="Name" value="">
+                  <br><br>
+                  <label for="Age">Age :&nbsp;&nbsp;</label>
+                  <input type="text" name="Age" value="">
+                    <br><br>
+                  <label for="Sex">Sex :&nbsp;&nbsp;</label>
+                  <select name="Sex" id="sex">
+                  <option value="0">Male</option>
+                  <option value="1">Female</option>
+                  </select>
+                  <br><br>
+                  <label for="Pclass">Pclass :</label>
+                  <input type="text" name="Pclass" value="">
+                    <br><br>
+                  <label for="Fare">Fare :&nbsp;&nbsp;</label>
+                  <input type="text" name="Fare" value="">
+                    <br><br>
+                  <label for="Embarked">Embarked :&nbsp;</label>
+                  <select name="Embarked" id="Embarked">
+
+                  <option value="1">S</option>
+                  <option value="2">C</option>
+                  <option value="3">Q</option>
+                  </select>
+                  <br><br>
+                  <label for="sibsp">Sibsp : </label>
+                  <input type="text" name="sibsp" value="">
+                    <br><br>
+                  <label for="Parch">Parch : </label>
+                  <input type="text" name="Parch" value="">
+                  <br><br>&emsp;&emsp;&emsp;
+                  <input type="submit" name="submit" value=" Make a Prediction" >
+                  </form>
+                  <p id='desp'> The sinking of the Titanic is one of the most infamous shipwrecks in history.
+
+On April 15, 1912, during her maiden voyage, the widely considered “unsinkable”
+RMS Titanic sank after colliding with an iceberg. Unfortunately, there weren’t
+ enough lifeboats for everyone onboard, resulting in the death of 1502 out of 2224
+ passengers and crew.
+
+While there was some element of luck involved in surviving,
+it seems some groups of people were more likely to survive than others.</p>
+              </div>
+              <div class="middle-column">
+                  <div id="box5">
+                      <img src="{% static 'titan2.jpeg' %}" alt="">
+                  </div>
+                  <div id="box6">
+                      <img src="{% static 'titan1.jpeg' %}" alt="">
+                  </div>
+                  <div id="box7">
+                      <img src="{% static 'titan.jpg' %}" alt="">
+                  </div>
+              </div>
+              <div id="box8">
+
+              </div>
+          </div>
+      </div>
+
+  </body>
+</html>

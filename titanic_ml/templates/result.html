@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <title></title>
+    <link rel="stylesheet" href="{% static 'result.css' %}">
+  </head>
+  <body>
+    <p  id=out size= 30px></p>
+    <script type="text/javascript" >
+    if({{predictions}}== 1)
+    {
+      document.body.style.backgroundColor = "green";
+      document.getElementById('out').innerHTML='Survived';
+    }
+    else{
+      document.body.style.backgroundColor = "red";
+      document.getElementById('out').innerHTML='Dead';
+    }
+    </script>
+  </body>
+</html>
